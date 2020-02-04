@@ -8,5 +8,26 @@ namespace Store
 {
     class Showcase
     {
+        Game[] games;
+
+        public Showcase(int size)
+        {
+            games = new Game[size];
+        }
+
+        public void addGame()
+        {
+
+        }
+        public void removeGame()
+        {
+
+        }
+
+        public void Show()
+        {
+
+        }
+
     }
 }
