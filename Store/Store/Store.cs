@@ -20,6 +20,8 @@ namespace Store
             showCase.addGame(g1);
             showCase.addGame(g2);
             showCase.addGame(g3);
+            DLC d1 = new DLC("Engineers", 10, "New gear");
+            g2.dlcs.Add(d1);
             
         }
 
