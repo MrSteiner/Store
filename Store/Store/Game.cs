@@ -8,13 +8,13 @@ namespace Store
 {
     class Game
     {
-        String[] genres;
-        float price;
-        List<DLC> dlcs;
-        string name;
-        string description;
-        string systemReqirements;
-        int metacriticScore;
+        public String[] genres;
+        public float price;
+        public List<DLC> dlcs;
+        public string name;
+        public string description;
+        public string systemReqirements;
+        public int metacriticScore;
 
         public Game(string name, string description, float price)
         {

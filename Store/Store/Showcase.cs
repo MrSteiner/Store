@@ -8,25 +8,37 @@ namespace Store
 {
     class Showcase
     {
-        Game[] games;
+        List<Game> games;
+        int maxGames;
 
         public Showcase(int size)
         {
-            games = new Game[size];
+            games = new List<Game>();
+            maxGames = size;
         }
 
-        public void addGame()
+        public void addGame(Game game)
         {
-
+            if(games.Count < maxGames)
+                games.Add(game);
         }
-        public void removeGame()
+        public void removeGame(Game game)
         {
-
+            games.Remove(game);
+        }
+        public void removeGame(int index)
+        {
+            if(index < games.Count)
+                games.RemoveAt(index);
         }
 
         public void Show()
         {
-
+            for(int i=0; i<games.Count; i++)
+            {
+                Console.WriteLine("[{0}] {1}", i, games[i].name);
+                //Console.WriteLine("["+ i +"]", games[i].name);
+            }
         }
 
     }

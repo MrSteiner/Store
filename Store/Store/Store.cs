@@ -8,13 +8,19 @@ namespace Store
 {
     class Store
     {
-        Showcase showCase;
+        public Showcase showCase;
 
         public Store()
         {
             showCase = new Showcase(5);
-            Game g1 = new Game("Raid SL", "Just, Whatever", 10);
+            Game g1 = new Game("Raid Shadow Legends", "Best game ever", 10);
+            Game g2 = new Game("Fallout 76", "Sucks", 60);
+            Game g3 = new Game("Fortnite", "Child Casino", 1);
             //Need to add games to showcase
+            showCase.addGame(g1);
+            showCase.addGame(g2);
+            showCase.addGame(g3);
+            
         }
 
         //buying
