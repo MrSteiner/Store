@@ -8,7 +8,7 @@ namespace Store
 {
     class Showcase
     {
-        List<Game> games;
+        public List<Game> games;
         int maxGames;
 
         public Showcase(int size)
@@ -26,10 +26,11 @@ namespace Store
         {
             games.Remove(game);
         }
-        public void removeGame(int index)
+        public bool removeGame(int index)
         {
             if(index < games.Count)
                 games.RemoveAt(index);
+            return true;
         }
 
         public void Show()

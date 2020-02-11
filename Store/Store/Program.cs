@@ -27,11 +27,14 @@ namespace Store
             */
 
             Store st = new Store();
-            
+
+            Console.WriteLine("Welcome to SteinerStore");
+            Console.WriteLine("Best game store in EU");
 
             while (true)
             {
                 //Buy game, see what games are there, quit store, print game description
+                Console.WriteLine("These are the available commands: Show, buy & quit");
                 string input = Console.ReadLine();
                 switch (input)
                 {
@@ -40,11 +43,35 @@ namespace Store
                         break;
 
                     case "show":
+                        Console.WriteLine("*Yells in Lil Jon* OK!!");
                         st.showCase.Show();
                         break;
 
+                    case "buy":
+                        // ask user what game
+                        // remove game from showcase
+                        // or tell user the game is not valid
+
+                        Console.WriteLine("*Yells in Lil Jon* WHAT GAME YOU WANT!?");
+
+                        string selectedGame = Console.ReadLine();
+                        int gameIndex = Convert.ToInt32(selectedGame);
+                        string gameName = null;
+
+                        if(gameIndex < st.showCase.games.Count)
+                            gameName = st.showCase.games[gameIndex].name;
+
+                        if (st.showCase.removeGame(gameIndex))
+                        {
+                            Console.WriteLine(gameName + " bought successfully");
+                        }
+                        else
+                            Console.WriteLine("*Yells in Lil Jon* Error");
+
+                        break;
+
                     default:
-                        Console.WriteLine("I do not understand...");
+                        Console.WriteLine("*yells in Lil Jon* WHAT?!");
                         break;
                 }
             }
