@@ -10,6 +10,18 @@ namespace Store
     {
         static void Main(string[] args)
         {
+            //ask a question
+            Console.WriteLine("What is your name?");
+
+            //read answer
+            string input = Console.ReadLine();
+
+            //Repeat answer
+            Console.WriteLine(input + ", really?");
+            Console.WriteLine("{0}, really?", input);
+
+            //wait for confirmation
+            Console.ReadLine();
         }
     }
 }
